@@ -30,6 +30,10 @@ inputs:
     required: false
     default: ''
     description: 'Path to a Namespace.Class.StaticMethod to run to perform the build.'
+  buildAddressables:
+    required: false
+    default: ''
+    description: 'Option to build unity addressable before the build is run.'
   kubeConfig:
     default: ''
     required: false
