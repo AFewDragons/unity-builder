@@ -37,8 +37,8 @@ namespace UnityBuilderAction
 
       // Perform build addressables
       if(options.ContainsKey("buildAddressables")){
-        AddressableAssetSettings.BuildPlayerContent();
       }
+      AddressableAssetSettings.BuildPlayerContent();
 
       // Perform build
       BuildReport buildReport = BuildPipeline.BuildPlayer(buildOptions);
