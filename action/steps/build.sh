@@ -108,8 +108,8 @@ echo "#    Building platform    #"
 echo "###########################"
 echo ""
 
-if [ "$BUILD_ADDRESSABLES" == "true" ] then
-  $CUSTOM_PARAMETERS = $CUSTOM_PARAMETERS " -customBuildAddressables"
+if [ "$BUILD_ADDRESSABLES" == "true" ]; then
+  $CUSTOM_PARAMETERS = $CUSTOM_PARAMETERS " -customBuildAddressables";
 fi
 
 xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
