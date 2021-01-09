@@ -108,6 +108,10 @@ echo "#    Building platform    #"
 echo "###########################"
 echo ""
 
+if [ "$BUILD_ADDRESSABLES" == "true" ]; then
+  CUSTOM_PARAMETERS="$CUSTOM_PARAMETERS -customBuildAddressables"
+fi
+
 unity-editor \
   -nographics \
   -logfile /dev/stdout \

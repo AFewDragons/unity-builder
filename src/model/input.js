@@ -37,6 +37,10 @@ class Input {
     return core.getInput('buildMethod'); // processed in docker file
   }
 
+  static get buildAddressables() {
+    return core.getInput('buildAddressables');
+  }
+
   static get versioningStrategy() {
     return core.getInput('versioning') || 'Semantic';
   }

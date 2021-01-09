@@ -6,6 +6,7 @@ using UnityBuilderAction.Reporting;
 using UnityBuilderAction.Versioning;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
+using UnityEditor.AddressableAssets.Settings;
 
 namespace UnityBuilderAction
 {
@@ -43,6 +44,11 @@ namespace UnityBuilderAction
       // Apply Android settings
       if (buildPlayerOptions.target == BuildTarget.Android)
         AndroidSettings.Apply(options);
+
+      // Perform build addressables
+      if(options.ContainsKey("buildAddressables")){
+        AddressableAssetSettings.BuildPlayerContent();
+      }
 
       // Perform build
       BuildReport buildReport = BuildPipeline.BuildPlayer(buildPlayerOptions);

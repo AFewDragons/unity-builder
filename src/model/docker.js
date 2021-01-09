@@ -29,6 +29,7 @@ class Docker {
       buildFile,
       buildMethod,
       buildVersion,
+      buildAddressables,
       androidVersionCode,
       androidKeystoreName,
       androidKeystoreBase64,
@@ -53,6 +54,7 @@ class Docker {
         --env BUILD_PATH="${buildPath}" \
         --env BUILD_FILE="${buildFile}" \
         --env BUILD_METHOD="${buildMethod}" \
+        --env BUILD_ADDRESSABLES="${buildAddressables}" \
         --env VERSION="${buildVersion}" \
         --env ANDROID_VERSION_CODE="${androidVersionCode}" \
         --env ANDROID_KEYSTORE_NAME="${androidKeystoreName}" \

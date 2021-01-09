@@ -39,6 +39,7 @@ class BuildParameters {
       buildFile,
       buildMethod: Input.buildMethod,
       buildVersion,
+      buildAddressables: Input.buildAddressables,
       androidVersionCode,
       androidKeystoreName: Input.androidKeystoreName,
       androidKeystoreBase64: Input.androidKeystoreBase64,
