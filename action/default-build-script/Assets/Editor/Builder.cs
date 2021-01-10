@@ -46,9 +46,9 @@ namespace UnityBuilderAction
         AndroidSettings.Apply(options);
 
       // Perform build addressables
-      if(options.ContainsKey("buildAddressables")){
+      //if(options.ContainsKey("buildAddressables")){
         AddressableAssetSettings.BuildPlayerContent();
-      }
+      //}
 
       // Perform build
       BuildReport buildReport = BuildPipeline.BuildPlayer(buildPlayerOptions);
